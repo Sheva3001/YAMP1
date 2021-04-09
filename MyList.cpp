@@ -79,7 +79,7 @@ void List::print(Node* head)
 		cout << endl;
 	else
 	{
-		cout << head->data << " "; //ËÒÔÓÎ¸ÁÛÂÏ ÔÂÂ„ÛÁÍÛ ‚˚‚Ó‰‡
+		cout << head->data << " "; //–∏—Å–ø–æ–ª—å–∑—É–µ–º –ø–µ—Ä–µ–≥—Ä—É–∑–∫—É –≤—ã–≤–æ–¥–∞
 		print(head->next);
 	}
 }
@@ -98,7 +98,7 @@ void List::createFromHead(Node*& head, ifstream& input)
 {
 	init(head);
 	Data elem;
-	while (input >> elem)			//ËÒÔÓÎ¸ÁÛÂÏ ÔÂÂ„ÛÁÍÛ ‚‚Ó‰‡ 
+	while (input >> elem)			//–∏—Å–ø–æ–ª—å–∑—É–µ–º –ø–µ—Ä–µ–≥—Ä—É–∑–∫—É –≤–≤–æ–¥–∞ 
 		addToHead(head, elem);
 }
 
@@ -107,12 +107,12 @@ void List::createFromTail(Node*& head)
 	init(head);
 	Node* tail = head;
 	int n;
-	cout << "¬‚Â‰ËÚÂ ÍÓÎË˜ÂÒÚ‚Ó ˝ÎÂÏÂÌÚÓ‚: ";
+	cout << "–í–≤–µ–¥–∏—Ç–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —ç–ª–µ–º–µ–Ω—Ç–æ–≤: ";
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		Data elem;
-		cout << endl << "¬‚Â‰ËÚÂ ˝ÎÂÏÂÌÚ: ";
+		cout << endl << "–í–≤–µ–¥–∏—Ç–µ —ç–ª–µ–º–µ–Ω—Ç: ";
 		cin >> elem;
 		if (isEmpty(head))
 		{
