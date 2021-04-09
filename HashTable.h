@@ -8,7 +8,7 @@ using namespace std;
 
 const int maxSize = 500;
 
-class ListTable : public List {	// Список
+class ListTable : public List {	// РЎРїРёСЃРѕРє
 public:
 	bool searchElem(Data elem) {
 		bool flag = false;
@@ -24,12 +24,12 @@ public:
 		int count = getCount();
 		bool flag = false;
 
-		addToHead(head, elem);		// Изменён head
+		addToHead(head, elem);		// РР·РјРµРЅС‘РЅ head
 
-		if (count != getCount())	// Изменение количества элементов
+		if (count != getCount())	// РР·РјРµРЅРµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЌР»РµРјРµРЅС‚РѕРІ
 			flag = true;
 
-		return flag;				//если flag = false, не добавлен в head
+		return flag;				//РµСЃР»Рё flag = false, РЅРµ РґРѕР±Р°РІР»РµРЅ РІ head
 	}
 
 	bool deleteElem(Data elem) {
@@ -73,7 +73,7 @@ public:
 		return size;
 	}
 
-	int hash(Data data) {				//вычисление номера ячейки i, умножение на степень
+	int hash(Data data) {				//РІС‹С‡РёСЃР»РµРЅРёРµ РЅРѕРјРµСЂР° СЏС‡РµР№РєРё i, СѓРјРЅРѕР¶РµРЅРёРµ РЅР° СЃС‚РµРїРµРЅСЊ
 		string key = data.getKey();
 
 		const int p = 53;
@@ -83,7 +83,7 @@ public:
 			hash += ((key[i] - 'a' + 1) * p_pow) % size;
 			p_pow *= p;
 		}
-		return hash % size; //чтобы не выйти за размер массива 
+		return hash % size; //С‡С‚РѕР±С‹ РЅРµ РІС‹Р№С‚Рё Р·Р° СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° 
 	}
 
 	int search(Data& data) {
@@ -102,7 +102,7 @@ public:
 	}
 
 	void print() {
-		cout << "Хеш таблица:" << endl;
+		cout << "РҐРµС€ С‚Р°Р±Р»РёС†Р°:" << endl;
 		for (int i = 0; i < size; i++)
 			table[i].printList();
 	}
